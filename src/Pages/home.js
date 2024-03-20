@@ -7,6 +7,10 @@ import { useState } from 'react'
 import styles from '../components/layout/Navbar.module.css'
 import { useActiveLink } from "../components/context/ActiveLinkContext"
 
+import ScrollTriggerComponent from "../components/ScrollTriggerComponent"
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 import figma_ico_62 from '../components/assets/figma_ico_62.svg'
 import photoshop_ico_62 from '../components/assets/photoshop_ico_62.svg';
 import illustrator_ico_62 from '../components/assets/illustrator_ico_62.svg';
@@ -65,9 +69,23 @@ const Home = () => {
         <Arsenal />
         </div>
 
+
+
         <div>
-          <h3 className="justmargin">Soluções Disponíveis</h3>
-          <p className="body-large">Em um mundo onde a primeira impressão muitas vezes é digital, separei um escopo de soluções para garantir que sua marca seja vista, sentida e lembrada. Seja com interfaces inteligentes que chamam atenção, estratégias sociais que se apegam ou identidades visuais que dão vida à sua história e publicações editoriais que informam e inspiram, a missão é conectar cada design e assim,  comunicar sua essência. Eu ofereço essa oferta de transformação visual, onde cada pixel tem um propósito e cada post tem uma promessa.</p>
+        <h3 className="justmargin">Soluções Disponíveis</h3>
+        <p className="body-large">Em um mundo onde a primeira impressão muitas vezes é digital, separei um escopo de soluções para garantir que sua marca seja vista, sentida e lembrada. Seja com interfaces inteligentes que chamam atenção, estratégias sociais que se apegam ou identidades visuais que dão vida à sua história e publicações editoriais que informam e inspiram, a missão é conectar cada design e assim,  comunicar sua essência. Eu ofereço essa oferta de transformação visual, onde cada pixel tem um propósito e cada post tem uma promessa.</p>
+
+        <ScrollTriggerComponent
+        start="top: 900px"
+        end="top: 1000px"
+        scrub={1}
+        markers={false}
+        childAnimation={{
+        from: { opacity: 0, y: 100 },
+        to: { opacity: 1, y: 0, ease: "power3.in" }
+        }}
+      >
+
         <div className="cardcontent">
       <Card
         title="UI / UX"
@@ -93,9 +111,22 @@ const Home = () => {
 
     <div className="separador"></div>
 
-    <h3>Conheça meu Trabalho</h3>
 
+    </ScrollTriggerComponent>
+
+    <ScrollTriggerComponent
+        start="top: 900px"
+        end="top: 1000px"
+        scrub={1}
+        markers={false}
+        childAnimation={{
+        from: { opacity: 0, y: 100 },
+        to: { opacity: 1, y: 0, ease: "power3.in" }
+        }}
+      >
+        <h3>Conheça meu Trabalho</h3>
     <Slider />
+    </ScrollTriggerComponent>
 
 
       
