@@ -9,12 +9,12 @@ const slides = [
     {
         title: 'Crypto Marketplace',
         text: 'Projeto de Marketplace para criptomoedas, protótipo feito para fins de estudo.',
-        image: 'https://i.imgur.com/NjbIWWa.jpeg',
+        image: 'https://imgur.com/qz4wrjq.jpeg',
     },
     {
         title: 'Ana Cristina',
         text: 'Identidade visual criada para cursos de autopreservação feminina. Plataforma Hotmart, tema "O Diabo Veste Prada"',
-        image: 'https://i.imgur.com/cMZSwSL.jpeg',
+        image: 'https://i.imgur.com/iGFPTUQ.jpeg',
     },
     {
         title: 'Lorem Ipsum',
@@ -32,8 +32,8 @@ const Slider = () => {
   
     const [currentSlide, setCurrentSlide] = useState(0);
     const totalSlides = slides.length;
-    const slideImageRef = useRef(null); // Referência para a imagem
-    const slideTextRef = useRef(null); // Referência para o texto
+    const slideImageRef = useRef(null); 
+    const slideTextRef = useRef(null); 
   
     const navigateSlide = (direction) => {
       const newIndex = direction === 'up' ? (currentSlide - 1 + totalSlides) % totalSlides : (currentSlide + 1) % totalSlides;
@@ -46,7 +46,7 @@ const Slider = () => {
         gsap.fromTo(slideImageRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5 });
         gsap.fromTo(slideTextRef.current, { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5 });
       }
-    }, [currentSlide]); // Dependência para reanimar quando o slide muda
+    }, [currentSlide]); 
   
     return (
       <div className="slider-container">

@@ -93,6 +93,8 @@ const Home = () => {
 
     <div className="separador"></div>
 
+    <h3>Conheça meu Trabalho</h3>
+
     <Slider />
 
 
