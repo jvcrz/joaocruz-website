@@ -1,0 +1,120 @@
+.home-container {
+    /* margin: 7.5rem 20rem; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+    flex-direction: column;
+    max-width: 80rem;
+}
+
+.aclass {
+    width: 1px;
+}
+
+.carrossel {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.home-content {
+    display: flex;
+    width: 100%;
+}
+
+.home-content2 {
+    width: 100%;
+
+}
+
+
+.label-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.open-title {
+    max-width: 50rem;
+    margin-bottom: -1rem;
+}
+
+.separador {
+    height: 7rem;
+    width: 100%;
+}
+
+.flow-img {
+    width: 400px;
+    margin-top: 2rem;
+}
+
+.justmargin {
+    margin-bottom: -0.02rem;
+}
+
+
+.cardcontent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .home-container {
+        margin-left: 7rem;
+        margin-right: 7rem;
+        margin-top: 7rem;
+        margin-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .open-title {
+        margin-bottom: -1rem;
+    }
+
+    .home-content {
+        flex-direction: column;
+    }
+
+    .flow-img {
+        margin-top: 3rem;
+    }
+    
+    .carrossel {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-container {
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-top: 7rem;
+        margin-bottom: 4rem;
+    }
+
+    .carrossel {
+        width: 100%;
+    }
+
+    .home-content {
+        flex-direction: column;
+    }
+
+    .open-title {
+        margin-bottom: -1rem;
+    }
+
+    .flow-img {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}

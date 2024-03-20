@@ -1,0 +1,17 @@
+.footerText {
+    color: #f8f9fd;
+    font-weight: 300;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    letter-spacing: 0.04em;
+}
+
+footer {
+    background-color: #121212;
+    width: 100vw;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}

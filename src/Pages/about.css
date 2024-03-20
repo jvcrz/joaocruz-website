@@ -1,0 +1,12 @@
+.containerabout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+    flex-direction: column;
+    max-width: 80rem;
+}

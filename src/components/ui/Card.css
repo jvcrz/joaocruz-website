@@ -1,0 +1,118 @@
+.card {
+    width: 45%;
+    border-radius: 8px;
+    background-color: rgba(36, 36, 36, 0.05);
+    padding: 0 32px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.titlecard {
+    font-weight: 600;
+    color: #f8f9fd;
+    opacity: 1;
+    margin-bottom: 12px;
+}
+
+.labelcard {
+    color: #f8f9fd;
+    opacity: 0.8;
+    line-height: 1.4em;
+    font-weight: 300;
+    margin-top: -0.02rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.04em;
+}
+
+.svgcard {
+    height: 2rem;
+}
+
+.icocard {
+    position: relative;
+    bottom: 0;
+    left: 92px;
+    display: flex;
+    gap: 32px;
+    opacity: 0;
+    transition: left 0.3s ease, opacity 0.3s ease;
+    flex-wrap: wrap;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-image: linear-gradient(to bottom, #0085D7, #5CC9FF);
+    border-radius: 8px 0 0 8px;
+    transition: width 0.3s ease;
+}
+
+.card:hover::before {
+    width: 10px;
+}
+
+.card:hover {
+    border-left-width: 10px;
+}
+
+.titlecard,
+.labelcard {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .titlecard,
+.card:hover .labelcard {
+    transform: translateX(20px);
+}
+
+.card:hover .icocard {
+    left: 20px;
+    opacity: 1;
+}
+
+.gradient {
+    position: absolute;
+    top: -400px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+    background: #5CC9FF;
+    border-radius: 50%;
+    filter: blur(200px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .gradient {
+    opacity: 0.09;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .card {
+        width: 100%;
+        min-height: none;
+    }
+}
+
+@media (max-width: 767px){
+    .card {
+        width: 100%;
+    }
+
+    .icocard {
+        margin-right: 2rem;
+    }
+
+    .svgcard {
+        height: 1.9rem;
+    }
+}
