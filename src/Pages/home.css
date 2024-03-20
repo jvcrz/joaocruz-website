@@ -14,12 +14,18 @@
 
 .aclass {
     width: 1px;
+    animation: easeDownUp 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
 }
 
 .carrossel {
     overflow-x: hidden;
     width: 100%;
     margin: 0 auto;
+    animation: easeDownUp 0.5s ease-out forwards;
+    animation-delay: 0.8s;
+    opacity: 0;
 }
 
 .home-content {
@@ -32,15 +38,40 @@
 
 }
 
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes easeDownUp {
+    0% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 
 .label-content {
     display: flex;
     flex-direction: column;
+    animation: easeDownUp 0.5s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
 }
 
 .open-title {
     max-width: 50rem;
     margin-bottom: -1rem;
+    animation: zoomIn 0.5s ease-out forwards;
 }
 
 .separador {
@@ -51,6 +82,9 @@
 .flow-img {
     width: 400px;
     margin-top: 2rem;
+    animation: easeDownUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
 }
 
 .justmargin {
